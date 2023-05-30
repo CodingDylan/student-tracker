@@ -1,38 +1,180 @@
-.App {
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+Link {
+  text-decoration: none;
+  color: #000;
+}
+.site-header { 
+  border-bottom: 1px solid #ccc;
+  padding: .5em 1em;
+}
+
+.site-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-identity {
+  float: left;
+}
+
+.site-identity h1 {
+  font-size: 1.5em;
+  margin: .7em 0 .3em 0;
+  display: inline-block;
+}
+
+.site-identity img {
+  max-width: 55px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.site-navigation {
+  float: right;
+}
+
+.site-navigation ul, li {
+  margin: 0; 
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+
+body{
+    background-color: linear-gradient(90deg, #C7C5F4, #776BCC);		
+  
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+
+.form{
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255,255,255,0.47);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+}
+
+.form--dash {
+  height: 520px;
+  width: 400px;
+  text-align: center;
+  margin-left: 37%;
+}
+.form *{
+  font-family: 'Poppins',sans-serif;
+  color: black;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3{
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label{
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+input{
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+  border-radius: 4px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder{
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button{
+  margin-top: 50px;
+  width: 100%;
+  background-color: rgb(77, 147, 238);
   color: white;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.social{
+  margin-top: 30px;
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 6px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(56, 97, 235, 1);
+  color: white;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(56, 97, 235, 0.7);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+  text-align: center;
 }

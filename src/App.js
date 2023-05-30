@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import useAuth from './context/useAuth'
+import React from 'react';
+import RoutesComp from './Routes';
+import { NotificationContainer } from 'react-notifications';
+import { AuthProvider } from './context/AuthContex';
 
 function App() {
+  const { user, setUser } = useAuth();
+
+   
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <div>
+        <RoutesComp />
+        <NotificationContainer />
+      </div>
+    </AuthProvider>
+  
   );
 }
 
