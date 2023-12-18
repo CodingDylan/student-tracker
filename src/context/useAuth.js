@@ -14,6 +14,7 @@ function useAuth() {
     onAuthStateChanged(auth, async user => {
       setUser(user)
   })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const login = (user, e, method) => {

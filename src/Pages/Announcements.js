@@ -1,9 +1,8 @@
 import React from 'react'
 import Header from '../components/Header'
 import AnnouncementCard from '../components/AnnouncementCard'
-import { onAuthStateChanged } from 'firebase/auth';
 import { collection, getDocs } from "firebase/firestore";
-import { auth, db } from '../firebase';
+import {  db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import useAuths from '../context/AuthContex';
 
@@ -31,6 +30,7 @@ function Announcements() {
       } else {
         getAnnouncements()
       }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   return (

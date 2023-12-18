@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header';
 import useAuth from '../context/useAuth';
-import { db, auth } from '../firebase';
+import { db} from '../firebase';
 import { getDoc, doc } from 'firebase/firestore';
 import useAuths from '../context/AuthContex';
 
@@ -82,6 +82,7 @@ const Login = () => {
             
         }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
  
     return(

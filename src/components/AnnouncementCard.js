@@ -24,6 +24,7 @@ export default function AnnouncementCard(props) {
 
     React.useEffect(() => {
         getUsers()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
   return (
